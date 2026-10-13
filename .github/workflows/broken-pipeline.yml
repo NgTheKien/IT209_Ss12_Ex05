@@ -21,6 +21,9 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
 
+      - name: Cấp quyền cho Gradle Wrapper
+        run: chmod +x gradlew
+
       - name: Thực thi JUnit Test với Gradle
         run: ./gradlew test
 
